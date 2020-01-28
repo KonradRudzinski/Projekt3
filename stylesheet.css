@@ -1,0 +1,16 @@
+.container{
+    margin-top: 72px;
+}
+
+.navbar-collapse {
+    text-align: center;
+}
+
+.navbar-brand{
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px;
+}
+
+

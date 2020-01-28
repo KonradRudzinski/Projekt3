@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Edytor Canvas">
+    <meta name="author" content="Konrad Rudziński">
+    <link rel="icon" href="favicon.ico">
+    <title>Konrad Rudziński Canvas</title>
+    
+    <!--Template based on URL below-->
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+    <!-- Place your stylesheet here-->
+    <link href="stylesheet.css" rel="stylesheet" type="text/css">
+</head>
+
+<!--data-offset decyduje o tym kiedy zmieni się podświetlenie aktualnej pozycji na stronie-->
+<body data-spy="scroll" data-target=".navbar" data-offset="200">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">K.R</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse  navbar-ex1-collapse" id="navbarsExampleDefault">
+        <ul class="nav navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Strona główna <span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+<!--
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+-->
+    </div>
+</nav>
+
+    <main role="main" class="container">
+        <h1>Wgraj obraz</h1>
+        <input class="pt-2" type='file' accept="image/*" />
+        <p>Przed:</p>
+        <img id="before" class="d-block w-100" width="" height="" src="obraz.jpg" alt="twoj obraz">
+        
+        <p>Po Canvas:</p>
+        <canvas id="canvas" class="d-block w-100" width="" height="" style="border:1px solid #d3d3d3;">
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+        <legend>Wybierz efekt</legend>
+                <div class="form-group">
+                    <select id='opcja' multiple class="form-control form-control-lg" onchange="wybranie()">
+                        <option value="kontrast">Kontrast</option>
+                        <option value="saturacja">Saturacja</option>
+                        <option value="szarosc">Szarość</option>
+                        <option value="sepia">Sepia</option>
+                    </select>
+                </div>
+
+        
+    <fieldset class="form-group">
+      <legend>Wartość efektu</legend>
+      <input type="range" min="1" max="200" value="100" class="custom-range" id="customRange1">
+    </fieldset>
+    <button type="button" class="btn btn-dark " onclick="zastosuj()">Zastosuj</button>
+    <button type="button" class=" btn btn-dark " onclick="reset()">Zresetuj</button>
+    
+        
+    <a id="download" download="myImage.jpg" href="" type="button" class="btn btn-danger" onclick="zapisz(this)">ZAPISZ</a>
+        
+        
+    </main><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script>
+
+    </script>
+    <script src="../Projekt3/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>
